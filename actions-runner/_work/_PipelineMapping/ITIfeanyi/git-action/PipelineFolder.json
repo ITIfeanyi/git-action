@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "ITIfeanyi/git-action",
+  "pipelineDirectory": "git-action",
+  "workspaceDirectory": "git-action\\git-action",
+  "repositories": {
+    "ITIfeanyi/git-action": {
+      "repositoryPath": "git-action\\git-action",
+      "lastRunOn": "05/23/2021 18:04:31 -07:00"
+    }
+  },
+  "lastRunOn": "05/23/2021 18:04:31 -07:00"
+}

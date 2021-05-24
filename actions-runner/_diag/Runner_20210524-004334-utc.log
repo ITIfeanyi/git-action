@@ -1,0 +1,131 @@
+[2021-05-24 00:43:34Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2021-05-24 00:43:34Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 00:43:34Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 00:43:34Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.credentials'
+[2021-05-24 00:43:34Z INFO Listener] Runner is built for Windows (X64) - win-x64.
+[2021-05-24 00:43:34Z INFO Listener] RuntimeInformation: Microsoft Windows 10.0.19042.
+[2021-05-24 00:43:34Z INFO Listener] Version: 2.278.0
+[2021-05-24 00:43:34Z INFO Listener] Commit: 62d926efce35d3ea16d7624a25aaa5b300737def
+[2021-05-24 00:43:34Z INFO Listener] Culture: en-US
+[2021-05-24 00:43:34Z INFO Listener] UI Culture: en-US
+[2021-05-24 00:43:34Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 00:43:34Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 00:43:34Z INFO Listener] Validating directory permissions for: 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 00:43:34Z INFO CommandLineParser] Parse
+[2021-05-24 00:43:34Z INFO CommandLineParser] Parsing 2 args
+[2021-05-24 00:43:34Z INFO CommandLineParser] parsing argument
+[2021-05-24 00:43:34Z INFO CommandLineParser] HasArgs: False
+[2021-05-24 00:43:34Z INFO CommandLineParser] Adding Command: run
+[2021-05-24 00:43:34Z INFO CommandLineParser] parsing argument
+[2021-05-24 00:43:34Z INFO CommandLineParser] HasArgs: False
+[2021-05-24 00:43:34Z INFO CommandLineParser] Adding Command: help
+[2021-05-24 00:43:34Z INFO Listener] Arguments parsed
+[2021-05-24 00:43:34Z ERR  Terminal] WRITE ERROR: Unrecognized command-line input arguments: 'help'. For usage refer to: .\config.cmd --help or ./config.sh --help
+[2021-05-24 00:43:34Z INFO Runner] ExecuteCommand
+[2021-05-24 00:43:34Z INFO ConfigurationStore] currentAssemblyLocation: C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin\Runner.Listener.dll
+[2021-05-24 00:43:34Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 00:43:34Z INFO ConfigurationStore] binPath: C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin
+[2021-05-24 00:43:34Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 00:43:34Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 00:43:34Z INFO ConfigurationStore] RootFolder: C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner
+[2021-05-24 00:43:34Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 00:43:34Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 00:43:34Z INFO HostContext] Well known config file 'Runner': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.runner'
+[2021-05-24 00:43:34Z INFO ConfigurationStore] ConfigFilePath: C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.runner
+[2021-05-24 00:43:34Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 00:43:34Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 00:43:34Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.credentials'
+[2021-05-24 00:43:34Z INFO ConfigurationStore] CredFilePath: C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.credentials
+[2021-05-24 00:43:34Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 00:43:34Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 00:43:34Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.credentials_migrated'
+[2021-05-24 00:43:34Z INFO ConfigurationStore] MigratedCredFilePath: C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.credentials_migrated
+[2021-05-24 00:43:34Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 00:43:34Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 00:43:34Z INFO HostContext] Well known config file 'Service': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.service'
+[2021-05-24 00:43:34Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.service
+[2021-05-24 00:43:34Z INFO CommandSettings] Flag 'help': 'False'
+[2021-05-24 00:43:34Z INFO CommandSettings] Flag 'version': 'False'
+[2021-05-24 00:43:34Z INFO CommandSettings] Flag 'commit': 'False'
+[2021-05-24 00:43:34Z INFO CommandSettings] Flag 'check': 'False'
+[2021-05-24 00:43:34Z INFO CommandSettings] Command 'configure': 'False'
+[2021-05-24 00:43:34Z INFO CommandSettings] Command 'remove': 'False'
+[2021-05-24 00:43:34Z INFO CommandSettings] Command 'warmup': 'False'
+[2021-05-24 00:43:34Z INFO ConfigurationManager] LoadSettings
+[2021-05-24 00:43:34Z INFO ConfigurationStore] IsConfigured()
+[2021-05-24 00:43:34Z INFO ConfigurationStore] IsConfigured: True
+[2021-05-24 00:43:34Z INFO ConfigurationManager] Is configured: True
+[2021-05-24 00:43:34Z INFO ConfigurationStore] Read setting file: 294 chars
+[2021-05-24 00:43:34Z INFO ConfigurationManager] Settings Loaded
+[2021-05-24 00:43:34Z INFO ConfigurationStore] IsServiceConfigured()
+[2021-05-24 00:43:34Z INFO ConfigurationStore] IsServiceConfigured: False
+[2021-05-24 00:43:34Z INFO CommandSettings] Command 'run': 'True'
+[2021-05-24 00:43:34Z INFO ConfigurationStore] IsConfigured()
+[2021-05-24 00:43:34Z INFO ConfigurationStore] IsConfigured: True
+[2021-05-24 00:43:34Z INFO ConfigurationManager] Is configured: True
+[2021-05-24 00:43:34Z INFO Runner] Could not parse the argument value '' for StartupType. Defaulting to Manual
+[2021-05-24 00:43:34Z INFO Runner] Set runner startup type - Manual
+[2021-05-24 00:43:34Z INFO CommandSettings] Flag 'once': 'False'
+[2021-05-24 00:43:34Z INFO Runner] RunAsync
+[2021-05-24 00:43:34Z INFO ConfigurationManager] LoadSettings
+[2021-05-24 00:43:34Z INFO ConfigurationStore] IsConfigured()
+[2021-05-24 00:43:34Z INFO ConfigurationStore] IsConfigured: True
+[2021-05-24 00:43:34Z INFO ConfigurationManager] Is configured: True
+[2021-05-24 00:43:34Z INFO ConfigurationManager] Settings Loaded
+[2021-05-24 00:43:34Z INFO MessageListener] {
+  "AgentId": 2,
+  "AgentName": "react-app",
+  "PoolId": 1,
+  "PoolName": "Default",
+  "ServerUrl": "https://pipelines.actions.githubusercontent.com/IRaKAn6jCHtpBwXhgT81SqzCEbhTohU3NfycqCUDNqqFQePbWa",
+  "GitHubUrl": "https://github.com/ITIfeanyi/git-action",
+  "WorkFolder": "_work"
+}
+[2021-05-24 00:43:34Z INFO MessageListener] Loading Credentials
+[2021-05-24 00:43:34Z INFO ConfigurationStore] HasCredentials()
+[2021-05-24 00:43:34Z INFO ConfigurationStore] stored True
+[2021-05-24 00:43:34Z INFO CredentialManager] GetCredentialProvider
+[2021-05-24 00:43:34Z INFO CredentialManager] Creating type OAuth
+[2021-05-24 00:43:34Z INFO CredentialManager] Creating credential type: OAuth
+[2021-05-24 00:43:34Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 00:43:34Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 00:43:34Z INFO HostContext] Well known config file 'RSACredentials': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.credentials_rsaparams'
+[2021-05-24 00:43:34Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.credentials_rsaparams
+[2021-05-24 00:43:34Z INFO MessageListener] Attempt to create session.
+[2021-05-24 00:43:34Z INFO MessageListener] Connecting to the Runner Server...
+[2021-05-24 00:43:34Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2021-05-24 00:43:35Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2021-05-24 00:43:35Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2021-05-24 00:43:35Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2021-05-24 00:43:35Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2021-05-24 00:43:35Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2021-05-24 00:43:37Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2021-05-24 00:43:37Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2021-05-24 00:43:37Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2021-05-24 00:43:38Z INFO MessageListener] VssConnection created
+[2021-05-24 00:43:38Z INFO Terminal] WRITE LINE: 
+[2021-05-24 00:43:38Z INFO Terminal] WRITE LINE: 
+[2021-05-24 00:43:39Z WARN GitHubActionsService] Authentication failed with status code 401.
+WWW-Authenticate: Bearer
+Strict-Transport-Security: max-age=2592000
+X-TFS-ProcessId: a378d3cd-008a-4856-9489-53208a8b3f6f
+ActivityId: 42ea2797-22b1-4bb0-ad63-92515499445d
+X-TFS-Session: a06ed227-0a56-4943-a3bf-b8c087f574c3
+X-VSS-E2EID: b77ee9f3-04c3-43c5-8f62-cdb4b3fa7eae
+X-VSS-SenderDeploymentId: 2c974d96-2c30-cef5-eff2-3e0511a903a5
+X-TFS-ServiceError: The+user+%27System%3aPublicAccess%3baaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa%27+is+not+authorized+to+access+this+resource.
+X-VSS-S2STargetService: 0000005A-0000-8888-8000-000000000000/visualstudio.com
+X-Cache: CONFIG_NOCACHE
+X-MSEdge-Ref: Ref A: 0AC374D9BA934D80B8362DF1FACED8E4 Ref B: DUS30EDGE0315 Ref C: 2021-05-24T00:43:37Z
+Date: Mon, 24 May 2021 00:43:37 GMT
+
+[2021-05-24 00:43:39Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.credentials_rsaparams
+[2021-05-24 00:43:39Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.credentials_rsaparams
+[2021-05-24 00:43:41Z INFO Terminal] WRITE LINE: Exiting...
+[2021-05-24 00:43:41Z INFO ConfigurationStore] IsServiceConfigured()
+[2021-05-24 00:43:41Z INFO ConfigurationStore] IsServiceConfigured: False
+[2021-05-24 00:43:41Z INFO HostContext] Runner will be shutdown for UserCancelled
+[2021-05-24 00:43:41Z WARN GitHubActionsService] Retrieving an AAD auth token took a long time (2.7275802 seconds)
+[2021-05-24 00:43:41Z WARN GitHubActionsService] POST request to https://pipelines.actions.githubusercontent.com/IRaKAn6jCHtpBwXhgT81SqzCEbhTohU3NfycqCUDNqqFQePbWa/_apis/distributedtask/pools/1/sessions has been cancelled.
+[2021-05-24 00:43:41Z INFO MessageListener] Session creation has been cancelled.
+[2021-05-24 00:43:41Z INFO Listener] Runner execution been cancelled.

@@ -1,0 +1,84 @@
+[2021-05-24 16:28:20Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2021-05-24 16:28:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 16:28:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 16:28:20Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.credentials'
+[2021-05-24 16:28:20Z INFO Listener] Runner is built for Windows (X64) - win-x64.
+[2021-05-24 16:28:20Z INFO Listener] RuntimeInformation: Microsoft Windows 10.0.19042.
+[2021-05-24 16:28:20Z INFO Listener] Version: 2.278.0
+[2021-05-24 16:28:20Z INFO Listener] Commit: 62d926efce35d3ea16d7624a25aaa5b300737def
+[2021-05-24 16:28:20Z INFO Listener] Culture: en-US
+[2021-05-24 16:28:20Z INFO Listener] UI Culture: en-US
+[2021-05-24 16:28:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 16:28:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 16:28:20Z INFO Listener] Validating directory permissions for: 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 16:28:20Z INFO CommandLineParser] Parse
+[2021-05-24 16:28:20Z INFO CommandLineParser] Parsing 2 args
+[2021-05-24 16:28:20Z INFO CommandLineParser] parsing argument
+[2021-05-24 16:28:20Z INFO CommandLineParser] HasArgs: False
+[2021-05-24 16:28:20Z INFO CommandLineParser] Adding Command: configure
+[2021-05-24 16:28:20Z INFO CommandLineParser] parsing argument
+[2021-05-24 16:28:20Z INFO CommandLineParser] HasArgs: True
+[2021-05-24 16:28:20Z INFO CommandLineParser] arg: help
+[2021-05-24 16:28:20Z INFO Listener] Arguments parsed
+[2021-05-24 16:28:20Z INFO Runner] ExecuteCommand
+[2021-05-24 16:28:20Z INFO ConfigurationStore] currentAssemblyLocation: C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin\Runner.Listener.dll
+[2021-05-24 16:28:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 16:28:20Z INFO ConfigurationStore] binPath: C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin
+[2021-05-24 16:28:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 16:28:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 16:28:20Z INFO ConfigurationStore] RootFolder: C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner
+[2021-05-24 16:28:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 16:28:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 16:28:20Z INFO HostContext] Well known config file 'Runner': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.runner'
+[2021-05-24 16:28:20Z INFO ConfigurationStore] ConfigFilePath: C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.runner
+[2021-05-24 16:28:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 16:28:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 16:28:20Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.credentials'
+[2021-05-24 16:28:20Z INFO ConfigurationStore] CredFilePath: C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.credentials
+[2021-05-24 16:28:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 16:28:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 16:28:20Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.credentials_migrated'
+[2021-05-24 16:28:20Z INFO ConfigurationStore] MigratedCredFilePath: C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.credentials_migrated
+[2021-05-24 16:28:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 16:28:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 16:28:20Z INFO HostContext] Well known config file 'Service': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.service'
+[2021-05-24 16:28:20Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.service
+[2021-05-24 16:28:20Z INFO CommandSettings] Flag 'help': 'True'
+[2021-05-24 16:28:20Z INFO Terminal] WRITE LINE: 
+Commands:
+ .\config.cmd         Configures the runner
+ .\config.cmd remove  Unconfigures the runner
+ .\run.cmd            Runs the runner interactively. Does not require any options.
+
+Options:
+ --help     Prints the help for each command
+ --version  Prints the runner version
+ --commit   Prints the runner commit
+ --check    Check the runner's network connectivity with GitHub server
+
+Config Options:
+ --unattended           Disable interactive prompts for missing arguments. Defaults will be used for missing options
+ --url string           Repository to add the runner to. Required if unattended
+ --token string         Registration token. Required if unattended
+ --name string          Name of the runner to configure (default DESKTOP-S5GKBQD)
+ --runnergroup string   Name of the runner group to add this runner to (defaults to the default runner group)
+ --labels string        Extra labels in addition to the default: 'self-hosted,Windows,X64'
+ --work string          Relative runner work directory (default _work)
+ --replace              Replace any existing runner with the same name (default false)
+ --pat                  GitHub personal access token used for checking network connectivity when executing `.\run.cmd --check`
+[2021-05-24 16:28:20Z INFO Terminal] WRITE LINE:  --runasservice   Run the runner as a service
+[2021-05-24 16:28:20Z INFO Terminal] WRITE LINE:  --windowslogonaccount string   Account to run the service as. Requires runasservice
+[2021-05-24 16:28:20Z INFO Terminal] WRITE LINE:  --windowslogonpassword string  Password for the service account. Requires runasservice
+[2021-05-24 16:28:20Z INFO Terminal] WRITE LINE: 
+Examples:
+ Check GitHub server network connectivity:
+  .\run.cmd --check --url <url> --pat <pat>
+ Configure a runner non-interactively:
+  .\config.cmd --unattended --url <url> --token <token>
+ Configure a runner non-interactively, replacing any existing runner with the same name:
+  .\config.cmd --unattended --url <url> --token <token> --replace [--name <name>]
+ Configure a runner non-interactively with three extra labels:
+  .\config.cmd --unattended --url <url> --token <token> --labels L1,L2,L3
+[2021-05-24 16:28:20Z INFO Terminal] WRITE LINE:  Configure a runner to run as a service:
+[2021-05-24 16:28:20Z INFO Terminal] WRITE LINE:   .\config.cmd --url <url> --token <token> --runasservice
+[2021-05-24 16:28:20Z INFO Listener] Runner execution has finished with return code 0

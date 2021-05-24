@@ -1,0 +1,3419 @@
+[2021-05-24 01:04:28Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2021-05-24 01:04:28Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:28Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:28Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.credentials'
+[2021-05-24 01:04:28Z INFO Worker] Version: 2.278.0
+[2021-05-24 01:04:28Z INFO Worker] Commit: 62d926efce35d3ea16d7624a25aaa5b300737def
+[2021-05-24 01:04:28Z INFO Worker] Culture: en-US
+[2021-05-24 01:04:28Z INFO Worker] UI Culture: en-US
+[2021-05-24 01:04:28Z INFO Worker] Waiting to receive the job message from the channel.
+[2021-05-24 01:04:28Z INFO Worker] Message received.
+[2021-05-24 01:04:29Z INFO Worker] Job message:
+ {
+  "fileTable": [
+    ".github/workflows/node.js.yml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/checkout",
+        "ref": "v2",
+        "repositoryType": "GitHub",
+        "path": ""
+      },
+      "condition": "success()",
+      "id": "2ad33848-49ea-50c8-ba3c-6d56baf65020",
+      "name": "actionscheckout"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/setup-node",
+        "ref": "v2",
+        "repositoryType": "GitHub",
+        "path": ""
+      },
+      "displayNameToken": {
+        "type": 3,
+        "file": 1,
+        "line": 22,
+        "col": 13,
+        "expr": "format('Use Node.js {0}', matrix.node-version)"
+      },
+      "inputs": {
+        "type": 2,
+        "file": 1,
+        "line": 25,
+        "col": 9,
+        "map": [
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 25,
+              "col": 9,
+              "lit": "node-version"
+            },
+            "value": {
+              "type": 3,
+              "file": 1,
+              "line": 25,
+              "col": 23,
+              "expr": "matrix.node-version"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "6e18ae3a-0002-5382-d895-85ba37ca0ed3",
+      "name": "actionssetup-node"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 26,
+              "col": 12,
+              "lit": "npm i"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "6df6c8b2-37e7-567b-dfd0-96a16ebefadf",
+      "name": "run1"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 27,
+              "col": 12,
+              "lit": "npm run build --if-present"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "2091dd97-b57a-59d7-148a-fbbcbde32eec",
+      "name": "run2"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 28,
+              "col": 12,
+              "lit": "npm test"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "d80f8feb-80b4-51bd-c876-203cada35044",
+      "name": "run3"
+    }
+  ],
+  "variables": {
+    "system.isScheduled": {
+      "value": "False"
+    },
+    "system": {
+      "value": "actions"
+    },
+    "system.hosttype": {
+      "value": "actions"
+    },
+    "system.servertype": {
+      "value": "Hosted"
+    },
+    "system.culture": {
+      "value": "en-US"
+    },
+    "system.collectionId": {
+      "value": "7cf730b2-e86c-4bc0-bd83-efabbbdb14b1"
+    },
+    "system.collectionUri": {
+      "value": "https://pipelines.actions.githubusercontent.com/IRaKAn6jCHtpBwXhgT81SqzCEbhTohU3NfycqCUDNqqFQePbWa/"
+    },
+    "system.taskDefinitionsUri": {
+      "value": "https://pipelines.actions.githubusercontent.com/IRaKAn6jCHtpBwXhgT81SqzCEbhTohU3NfycqCUDNqqFQePbWa/"
+    },
+    "system.pipelineStartTime": {
+      "value": "2021-05-24 01:04:18+00:00"
+    },
+    "system.definitionId": {
+      "value": "3"
+    },
+    "system.runner.lowdiskspacethreshold": {
+      "value": "100"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.UseContextNameForGITHUBACTION": {
+      "value": "true"
+    },
+    "system.teamProjectId": {
+      "value": "00000000-0000-0000-0000-000000000000"
+    },
+    "build.buildId": {
+      "value": "2"
+    },
+    "build.containerId": {
+      "value": "1461122"
+    },
+    "system.workflowFilePath": {
+      "value": ".github/workflows/node.js.yml"
+    },
+    "system.definitionName": {
+      "value": "git-action"
+    },
+    "system.planId": {
+      "value": "0c9012e2-cb93-4b8c-a40c-560c21c11713"
+    },
+    "system.timelineId": {
+      "value": "0c9012e2-cb93-4b8c-a40c-560c21c11713"
+    },
+    "system.stageDisplayName": {
+      "value": "__default"
+    },
+    "system.stageId": {
+      "value": "96ac2280-8cb4-5df5-99de-dd2da759617d"
+    },
+    "system.stageName": {
+      "value": "__default"
+    },
+    "system.stageAttempt": {
+      "value": "1"
+    },
+    "system.phaseDisplayName": {
+      "value": "build"
+    },
+    "system.phaseId": {
+      "value": "6884a131-87da-5381-61f3-d7acc3b91d76"
+    },
+    "system.phaseName": {
+      "value": "build"
+    },
+    "system.phaseAttempt": {
+      "value": "1"
+    },
+    "system.jobIdentifier": {
+      "value": "build._14_x"
+    },
+    "system.jobAttempt": {
+      "value": "1"
+    },
+    "System.JobPositionInPhase": {
+      "value": "1"
+    },
+    "System.TotalJobsInPhase": {
+      "value": "1"
+    },
+    "system.github.job": {
+      "value": "build"
+    },
+    "system.jobDisplayName": {
+      "value": "build (14.x)"
+    },
+    "system.jobId": {
+      "value": "006c7e6f-00a1-57ff-4d9c-5871960fc9e4"
+    },
+    "system.jobName": {
+      "value": "_14_x"
+    },
+    "system.github.token.permissions": {
+      "value": "{\"Actions\":\"write\",\"Checks\":\"write\",\"Contents\":\"write\",\"Deployments\":\"write\",\"Issues\":\"write\",\"Metadata\":\"read\",\"Packages\":\"write\",\"PullRequests\":\"write\",\"RepositoryProjects\":\"write\",\"SecurityEvents\":\"write\",\"Statuses\":\"write\"}"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.runnerGroupName": {
+      "value": "Default"
+    }
+  },
+  "messageType": "PipelineAgentJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "Actions",
+    "version": 13,
+    "planId": "0c9012e2-cb93-4b8c-a40c-560c21c11713",
+    "planGroup": "Actions:00000000-0000-0000-0000-000000000000:1",
+    "artifactUri": "vstfs:///Build/Build/2",
+    "artifactLocation": null,
+    "definition": {
+      "_links": {},
+      "id": 3,
+      "name": "git-action"
+    },
+    "owner": {
+      "_links": {},
+      "id": 3,
+      "name": "ITIfeanyi"
+    }
+  },
+  "timeline": {
+    "id": "0c9012e2-cb93-4b8c-a40c-560c21c11713",
+    "changeId": 5,
+    "location": null
+  },
+  "jobId": "006c7e6f-00a1-57ff-4d9c-5871960fc9e4",
+  "jobDisplayName": "build (14.x)",
+  "jobName": "_14_x",
+  "requestId": 1,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "7cf730b2-e86c-4bc0-bd83-efabbbdb14b1",
+          "ServerName": "IRaKAn6jCHtpBwXhgT81SqzCEbhTohU3NfycqCUDNqqFQePbWa",
+          "CacheServerUrl": "https://artifactcache.actions.githubusercontent.com/IRaKAn6jCHtpBwXhgT81SqzCEbhTohU3NfycqCUDNqqFQePbWa/"
+        },
+        "name": "SystemVssConnection",
+        "url": "https://pipelines.actions.githubusercontent.com/IRaKAn6jCHtpBwXhgT81SqzCEbhTohU3NfycqCUDNqqFQePbWa/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": ***
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/heads/master"
+        },
+        {
+          "k": "sha",
+          "v": "f375d828c4003783d8de3693a9363de15ce3fd52"
+        },
+        {
+          "k": "repository",
+          "v": "ITIfeanyi/git-action"
+        },
+        {
+          "k": "repository_owner",
+          "v": "ITIfeanyi"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/ITIfeanyi/git-action.git"
+        },
+        {
+          "k": "run_id",
+          "v": "869744225"
+        },
+        {
+          "k": "run_number",
+          "v": "1"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "actor",
+          "v": "ITIfeanyi"
+        },
+        {
+          "k": "workflow",
+          "v": "Node.js CI"
+        },
+        {
+          "k": "head_ref",
+          "v": ""
+        },
+        {
+          "k": "base_ref",
+          "v": ""
+        },
+        {
+          "k": "event_name",
+          "v": "push"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "after",
+                "v": "f375d828c4003783d8de3693a9363de15ce3fd52"
+              },
+              {
+                "k": "base_ref",
+                "v": null
+              },
+              {
+                "k": "before",
+                "v": "3cce72119ed1cf72f49be81367c1529af17d5c93"
+              },
+              {
+                "k": "commits",
+                "v": {
+                  "t": 1,
+                  "a": [
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "78936556+ITIfeanyi@users.noreply.github.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "ITIfeanyi"
+                              },
+                              {
+                                "k": "username",
+                                "v": "ITIfeanyi"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "noreply@github.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "GitHub"
+                              },
+                              {
+                                "k": "username",
+                                "v": "web-flow"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "f375d828c4003783d8de3693a9363de15ce3fd52"
+                        },
+                        {
+                          "k": "message",
+                          "v": "Create node.js.yml"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2021-05-23T17:22:27-07:00"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "eed7745ad33bcf8d355ca4ff17c7c9b7839566c4"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/ITIfeanyi/git-action/commit/f375d828c4003783d8de3693a9363de15ce3fd52"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "compare",
+                "v": "https://github.com/ITIfeanyi/git-action/compare/3cce72119ed1...f375d828c400"
+              },
+              {
+                "k": "created",
+                "v": false
+              },
+              {
+                "k": "deleted",
+                "v": false
+              },
+              {
+                "k": "forced",
+                "v": false
+              },
+              {
+                "k": "head_commit",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "author",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "78936556+ITIfeanyi@users.noreply.github.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "ITIfeanyi"
+                          },
+                          {
+                            "k": "username",
+                            "v": "ITIfeanyi"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "committer",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "noreply@github.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "GitHub"
+                          },
+                          {
+                            "k": "username",
+                            "v": "web-flow"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "distinct",
+                      "v": true
+                    },
+                    {
+                      "k": "id",
+                      "v": "f375d828c4003783d8de3693a9363de15ce3fd52"
+                    },
+                    {
+                      "k": "message",
+                      "v": "Create node.js.yml"
+                    },
+                    {
+                      "k": "timestamp",
+                      "v": "2021-05-23T17:22:27-07:00"
+                    },
+                    {
+                      "k": "tree_id",
+                      "v": "eed7745ad33bcf8d355ca4ff17c7c9b7839566c4"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/ITIfeanyi/git-action/commit/f375d828c4003783d8de3693a9363de15ce3fd52"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "pusher",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "email",
+                      "v": "78936556+ITIfeanyi@users.noreply.github.com"
+                    },
+                    {
+                      "k": "name",
+                      "v": "ITIfeanyi"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "ref",
+                "v": "refs/heads/master"
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/ITIfeanyi/git-action.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": 1621815310.0
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "master"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": null
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": false
+                    },
+                    {
+                      "k": "forks",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "ITIfeanyi/git-action"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/ITIfeanyi/git-action.git"
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": true
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": false
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": true
+                    },
+                    {
+                      "k": "homepage",
+                      "v": null
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/ITIfeanyi/git-action"
+                    },
+                    {
+                      "k": "id",
+                      "v": 370183841.0
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": "JavaScript"
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": null
+                    },
+                    {
+                      "k": "master_branch",
+                      "v": "master"
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "git-action"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "MDEwOlJlcG9zaXRvcnkzNzAxODM4NDE="
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/78936556?v=4"
+                          },
+                          {
+                            "k": "email",
+                            "v": "78936556+ITIfeanyi@users.noreply.github.com"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/ITIfeanyi/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/ITIfeanyi/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/ITIfeanyi/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/ITIfeanyi/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/ITIfeanyi"
+                          },
+                          {
+                            "k": "id",
+                            "v": 78936556.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "ITIfeanyi"
+                          },
+                          {
+                            "k": "name",
+                            "v": "ITIfeanyi"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "MDQ6VXNlcjc4OTM2NTU2"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/ITIfeanyi/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/ITIfeanyi/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/ITIfeanyi/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/ITIfeanyi/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/ITIfeanyi/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/ITIfeanyi"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": false
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": 1621815747.0
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:ITIfeanyi/git-action.git"
+                    },
+                    {
+                      "k": "stargazers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/ITIfeanyi/git-action"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/teams"
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/ITIfeanyi/git-action/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2021-05-24T00:17:46Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/ITIfeanyi/git-action"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "sender",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars.githubusercontent.com/u/78936556?v=4"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/users/ITIfeanyi/events{/privacy}"
+                    },
+                    {
+                      "k": "followers_url",
+                      "v": "https://api.github.com/users/ITIfeanyi/followers"
+                    },
+                    {
+                      "k": "following_url",
+                      "v": "https://api.github.com/users/ITIfeanyi/following{/other_user}"
+                    },
+                    {
+                      "k": "gists_url",
+                      "v": "https://api.github.com/users/ITIfeanyi/gists{/gist_id}"
+                    },
+                    {
+                      "k": "gravatar_id",
+                      "v": ""
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/ITIfeanyi"
+                    },
+                    {
+                      "k": "id",
+                      "v": 78936556.0
+                    },
+                    {
+                      "k": "login",
+                      "v": "ITIfeanyi"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "MDQ6VXNlcjc4OTM2NTU2"
+                    },
+                    {
+                      "k": "organizations_url",
+                      "v": "https://api.github.com/users/ITIfeanyi/orgs"
+                    },
+                    {
+                      "k": "received_events_url",
+                      "v": "https://api.github.com/users/ITIfeanyi/received_events"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/users/ITIfeanyi/repos"
+                    },
+                    {
+                      "k": "site_admin",
+                      "v": false
+                    },
+                    {
+                      "k": "starred_url",
+                      "v": "https://api.github.com/users/ITIfeanyi/starred{/owner}{/repo}"
+                    },
+                    {
+                      "k": "subscriptions_url",
+                      "v": "https://api.github.com/users/ITIfeanyi/subscriptions"
+                    },
+                    {
+                      "k": "type",
+                      "v": "User"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/users/ITIfeanyi"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        }
+      ]
+    },
+    "needs": {
+      "t": 2
+    },
+    "matrix": {
+      "t": 2,
+      "d": [
+        {
+          "k": "node-version",
+          "v": "14.x"
+        }
+      ]
+    },
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 0.0
+        },
+        {
+          "k": "job-total",
+          "v": 1.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 1.0
+        }
+      ]
+    }
+  }
+}
+[2021-05-24 01:04:29Z INFO JobRunner] Job ID 006c7e6f-00a1-57ff-4d9c-5871960fc9e4
+[2021-05-24 01:04:29Z INFO JobRunner] Creating job server with URL: https://pipelines.actions.githubusercontent.com/IRaKAn6jCHtpBwXhgT81SqzCEbhTohU3NfycqCUDNqqFQePbWa/
+[2021-05-24 01:04:29Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2021-05-24 01:04:29Z INFO Worker] Listening for cancel message from the channel.
+[2021-05-24 01:04:29Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.
+[2021-05-24 01:04:31Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2021-05-24 01:04:31Z INFO JobServerQueue] Start process web console line queue.
+[2021-05-24 01:04:31Z INFO JobServerQueue] Start process file upload queue.
+[2021-05-24 01:04:31Z INFO JobServerQueue] Start process timeline update queue.
+[2021-05-24 01:04:31Z INFO ExecutionContext] Initialize GitHub context
+[2021-05-24 01:04:31Z INFO ExecutionContext] Initialize Env context
+[2021-05-24 01:04:31Z INFO ConfigurationStore] currentAssemblyLocation: C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin\Runner.Worker.dll
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:31Z INFO ConfigurationStore] binPath: C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:31Z INFO ConfigurationStore] RootFolder: C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:31Z INFO HostContext] Well known config file 'Runner': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.runner'
+[2021-05-24 01:04:31Z INFO ConfigurationStore] ConfigFilePath: C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.runner
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:31Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.credentials'
+[2021-05-24 01:04:31Z INFO ConfigurationStore] CredFilePath: C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.credentials
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:31Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.credentials_migrated'
+[2021-05-24 01:04:31Z INFO ConfigurationStore] MigratedCredFilePath: C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.credentials_migrated
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:31Z INFO HostContext] Well known config file 'Service': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.service'
+[2021-05-24 01:04:31Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.service
+[2021-05-24 01:04:31Z INFO ConfigurationStore] Read setting file: 294 chars
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Diag': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_diag'
+[2021-05-24 01:04:31Z INFO JobRunner] Starting the job execution context.
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:31Z INFO JobRunner] Validating directory permissions for: 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Tools': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_tool'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Temp': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp'
+[2021-05-24 01:04:31Z INFO JobRunner] Getting job extension.
+[2021-05-24 01:04:31Z INFO JobRunner] Initialize job. Getting all job steps.
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Diag': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_diag'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:31Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.credentials'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:31Z INFO HostContext] Well known config file 'SetupInfo': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\.setup_info'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:31Z INFO PipelineDirectoryManager] Loading tracking config if exists: C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_PipelineMapping\ITIfeanyi/git-action\PipelineFolder.json
+[2021-05-24 01:04:31Z INFO PipelineDirectoryManager] Creating a new tracking config file.
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:31Z INFO PipelineDirectoryManager] Creating pipeline directory.
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:31Z INFO PipelineDirectoryManager] Creating workspace directory.
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:31Z INFO JobExtension] Downloading actions
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:31Z INFO HostContext] Well known directory 'Actions': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions'
+[2021-05-24 01:04:31Z INFO JobServerQueue] Try to append 1 batches web console lines for record '43dfa3f7-b58f-4233-8952-6e85a56846e2', success rate: 1/1.
+[2021-05-24 01:04:33Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:33Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:33Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:33Z INFO HostContext] Well known directory 'Actions': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions'
+[2021-05-24 01:04:33Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:33Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:33Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:33Z INFO HostContext] Well known directory 'Actions': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions'
+[2021-05-24 01:04:33Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/checkout/zipball/5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f' into C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions\_temp_fe33d4e4-ac6b-4daa-9f02-0f080c625fec\75f4414b-151e-47f7-a4fd-af3a47d0ac67.zip.
+[2021-05-24 01:04:33Z INFO JobServerQueue] Try to append 1 batches web console lines for record '43dfa3f7-b58f-4233-8952-6e85a56846e2', success rate: 1/1.
+[2021-05-24 01:04:42Z INFO ActionManager] Finished getting action repository.
+[2021-05-24 01:04:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:42Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:42Z INFO HostContext] Well known directory 'Actions': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions'
+[2021-05-24 01:04:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:42Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:42Z INFO HostContext] Well known directory 'Actions': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions'
+[2021-05-24 01:04:42Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/setup-node/zipball/46071b5c7a2e0c34e49c3cb8a0e792e86e18d5ea' into C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions\_temp_7de97a79-9c9f-496e-8f0e-8952e5bcc75b\e543b644-4daf-41b7-bfd6-c2ff71dcd00f.zip.
+[2021-05-24 01:04:43Z INFO JobServerQueue] Try to append 1 batches web console lines for record '43dfa3f7-b58f-4233-8952-6e85a56846e2', success rate: 1/1.
+[2021-05-24 01:04:55Z INFO ActionManager] Finished getting action repository.
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Actions': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions'
+[2021-05-24 01:04:55Z INFO ActionManifestManager] Load schema file with definitions: [
+  "null",
+  "boolean",
+  "number",
+  "string",
+  "sequence",
+  "mapping",
+  "any",
+  "action-root",
+  "inputs",
+  "input",
+  "outputs",
+  "outputs-attributes",
+  "runs",
+  "container-runs",
+  "container-runs-args",
+  "container-runs-env",
+  "node12-runs",
+  "plugin-runs",
+  "composite-runs",
+  "composite-steps",
+  "composite-step",
+  "container-runs-context",
+  "output-value",
+  "input-default-context",
+  "non-empty-string",
+  "string-steps-context",
+  "step-env"
+]
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Actions': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions'
+[2021-05-24 01:04:55Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2021-05-24 01:04:55Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Actions': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions'
+[2021-05-24 01:04:55Z INFO ActionManager] Load action that reference repository from 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions\actions\checkout\v2'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Actions': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions'
+[2021-05-24 01:04:55Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2021-05-24 01:04:55Z INFO ActionManager] Action pre node.js file: N/A.
+[2021-05-24 01:04:55Z INFO ActionManager] Action node.js file: dist/index.js.
+[2021-05-24 01:04:55Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Actions': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Actions': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions'
+[2021-05-24 01:04:55Z INFO ActionManifestManager] Ignore action property author.
+[2021-05-24 01:04:55Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Setup Node.js environment",
+  "description": "Setup a Node.js environment by adding problem matchers and optionally downloading and adding it to the PATH",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 5,
+          "col": 3,
+          "lit": "always-auth"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 7,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 8,
+          "col": 3,
+          "lit": "node-version"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 3,
+          "lit": "architecture"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 12,
+          "col": 3,
+          "lit": "check-latest"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 14,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 15,
+          "col": 3,
+          "lit": "registry-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 17,
+          "col": 3,
+          "lit": "scope"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 19,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 3,
+          "line": 21,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 25,
+          "col": 3,
+          "lit": "version"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": false,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": null,
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": {
+    "version": "The version property will not be supported after October 1, 2019. Use node-version instead"
+  }
+}
+[2021-05-24 01:04:55Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Actions': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions'
+[2021-05-24 01:04:55Z INFO ActionManager] Load action that reference repository from 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions\actions\setup-node\v2'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Actions': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions'
+[2021-05-24 01:04:55Z INFO ActionManifestManager] Ignore action property author.
+[2021-05-24 01:04:55Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Setup Node.js environment",
+  "description": "Setup a Node.js environment by adding problem matchers and optionally downloading and adding it to the PATH",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 5,
+          "col": 3,
+          "lit": "always-auth"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 7,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 8,
+          "col": 3,
+          "lit": "node-version"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 3,
+          "lit": "architecture"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 12,
+          "col": 3,
+          "lit": "check-latest"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 14,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 15,
+          "col": 3,
+          "lit": "registry-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 17,
+          "col": 3,
+          "lit": "scope"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 19,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 3,
+          "line": 21,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 25,
+          "col": 3,
+          "lit": "version"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": false,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": null,
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": {
+    "version": "The version property will not be supported after October 1, 2019. Use node-version instead"
+  }
+}
+[2021-05-24 01:04:55Z INFO ActionManager] Action pre node.js file: N/A.
+[2021-05-24 01:04:55Z INFO ActionManager] Action node.js file: dist/index.js.
+[2021-05-24 01:04:55Z INFO ActionManager] Action post node.js file: N/A.
+[2021-05-24 01:04:55Z INFO JobExtension] Adding .
+[2021-05-24 01:04:55Z INFO JobExtension] Adding .
+[2021-05-24 01:04:55Z INFO JobExtension] Adding .
+[2021-05-24 01:04:55Z INFO JobExtension] Adding .
+[2021-05-24 01:04:55Z INFO JobExtension] Adding .
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Diag': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_diag'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Diag': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_diag'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Diag': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_diag'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Diag': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_diag'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Diag': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_diag'
+[2021-05-24 01:04:55Z INFO JobExtension] Total accessible running process: 210.
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:55Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:55Z INFO JobRunner] Total job steps: 5.
+[2021-05-24 01:04:55Z INFO JobRunner] Run all job steps.
+[2021-05-24 01:04:56Z INFO StepsRunner] Processing step: DisplayName='Run actions/checkout@v2'
+[2021-05-24 01:04:56Z INFO StepsRunner] Initialize Env context for step
+[2021-05-24 01:04:56Z INFO StepsRunner] Evaluating: success()
+[2021-05-24 01:04:56Z INFO StepsRunner] Result: true
+[2021-05-24 01:04:56Z INFO StepsRunner] Starting the step.
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:56Z INFO StepsRunner] Which: 'chcp'
+[2021-05-24 01:04:56Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper] Starting process:
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper] Process started with process id 17376, waiting for process exit.
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper] Finished process 17376 with exit code 0, and elapsed time 00:00:00.3199957.
+[2021-05-24 01:04:56Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Actions': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions'
+[2021-05-24 01:04:56Z INFO ActionManager] Load action that reference repository from 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions\actions\checkout\v2'
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Actions': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions'
+[2021-05-24 01:04:56Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2021-05-24 01:04:56Z INFO ActionManager] Action pre node.js file: N/A.
+[2021-05-24 01:04:56Z INFO ActionManager] Action node.js file: dist/index.js.
+[2021-05-24 01:04:56Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2021-05-24 01:04:56Z INFO ExecutionContext] Reserve record order 7 to 12 for post job actions.
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Diag': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_diag'
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Temp': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp'
+[2021-05-24 01:04:56Z INFO ActionRunner] Write event payload to C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp\_github_workflow\event.json
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Temp': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp'
+[2021-05-24 01:04:56Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2021-05-24 01:04:56Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathFileCommand, Runner.Worker
+[2021-05-24 01:04:56Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvFileCommand, Runner.Worker
+[2021-05-24 01:04:56Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "ITIfeanyi/git-action"
+}
+[2021-05-24 01:04:56Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2021-05-24 01:04:56Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2021-05-24 01:04:56Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2021-05-24 01:04:56Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2021-05-24 01:04:56Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2021-05-24 01:04:56Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2021-05-24 01:04:56Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2021-05-24 01:04:56Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2021-05-24 01:04:56Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 58,
+  "col": 14,
+  "lit": "1"
+}
+[2021-05-24 01:04:56Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 61,
+  "col": 14,
+  "lit": "false"
+}
+[2021-05-24 01:04:56Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2021-05-24 01:04:56Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2021-05-24 01:04:56Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.InternalPluginSetRepoPathCommandExtension, Runner.Worker
+[2021-05-24 01:04:56Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvCommandExtension, Runner.Worker
+[2021-05-24 01:04:56Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputCommandExtension, Runner.Worker
+[2021-05-24 01:04:56Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateCommandExtension, Runner.Worker
+[2021-05-24 01:04:56Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathCommandExtension, Runner.Worker
+[2021-05-24 01:04:56Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMaskCommandExtension, Runner.Worker
+[2021-05-24 01:04:56Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMatcherCommandExtension, Runner.Worker
+[2021-05-24 01:04:56Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.RemoveMatcherCommandExtension, Runner.Worker
+[2021-05-24 01:04:56Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.WarningCommandExtension, Runner.Worker
+[2021-05-24 01:04:56Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.ErrorCommandExtension, Runner.Worker
+[2021-05-24 01:04:56Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.DebugCommandExtension, Runner.Worker
+[2021-05-24 01:04:56Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.GroupCommandExtension, Runner.Worker
+[2021-05-24 01:04:56Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EndGroupCommandExtension, Runner.Worker
+[2021-05-24 01:04:56Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EchoCommandExtension, Runner.Worker
+[2021-05-24 01:04:56Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2021-05-24 01:04:56Z INFO ActionCommandManager] Register action command extension for command set-env
+[2021-05-24 01:04:56Z INFO ActionCommandManager] Register action command extension for command set-output
+[2021-05-24 01:04:56Z INFO ActionCommandManager] Register action command extension for command save-state
+[2021-05-24 01:04:56Z INFO ActionCommandManager] Register action command extension for command add-path
+[2021-05-24 01:04:56Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2021-05-24 01:04:56Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2021-05-24 01:04:56Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2021-05-24 01:04:56Z INFO ActionCommandManager] Register action command extension for command warning
+[2021-05-24 01:04:56Z INFO ActionCommandManager] Register action command extension for command error
+[2021-05-24 01:04:56Z INFO ActionCommandManager] Register action command extension for command debug
+[2021-05-24 01:04:56Z INFO ActionCommandManager] Register action command extension for command group
+[2021-05-24 01:04:56Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2021-05-24 01:04:56Z INFO ActionCommandManager] Register action command extension for command echo
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:04:56Z INFO HostContext] Well known directory 'Externals': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\externals'
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper] Starting process:
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\externals\node12\bin\node.exe'
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions\actions\checkout\v2\dist/index.js"'
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\git-action\git-action'
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-05-24 01:04:56Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2021-05-24 01:04:57Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ad33848-49ea-50c8-ba3c-6d56baf65020', success rate: 1/1.
+[2021-05-24 01:04:57Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2021-05-24 01:05:05Z INFO ProcessInvokerWrapper] Process started with process id 8692, waiting for process exit.
+[2021-05-24 01:05:05Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:05:05Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:05:05Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:05:15Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ad33848-49ea-50c8-ba3c-6d56baf65020', success rate: 1/1.
+[2021-05-24 01:05:15Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ad33848-49ea-50c8-ba3c-6d56baf65020', success rate: 1/1.
+[2021-05-24 01:05:16Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:05:16Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:05:16Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:05:16Z INFO AddMaskCommandExtension] Add new secret mask with length of 76
+[2021-05-24 01:05:17Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ad33848-49ea-50c8-ba3c-6d56baf65020', success rate: 1/1.
+[2021-05-24 01:05:17Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ad33848-49ea-50c8-ba3c-6d56baf65020', success rate: 1/1.
+[2021-05-24 01:05:21Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ad33848-49ea-50c8-ba3c-6d56baf65020', success rate: 1/1.
+[2021-05-24 01:05:23Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ad33848-49ea-50c8-ba3c-6d56baf65020', success rate: 1/1.
+[2021-05-24 01:05:26Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:05:26Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:05:26Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:05:27Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ad33848-49ea-50c8-ba3c-6d56baf65020', success rate: 1/1.
+[2021-05-24 01:05:28Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ad33848-49ea-50c8-ba3c-6d56baf65020', success rate: 1/1.
+[2021-05-24 01:05:30Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ad33848-49ea-50c8-ba3c-6d56baf65020', success rate: 1/1.
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper] Finished process 8692 with exit code 0, and elapsed time 00:00:33.8940245.
+[2021-05-24 01:05:30Z INFO StepsRunner] Step result: 
+[2021-05-24 01:05:30Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2021-05-24 01:05:30Z INFO StepsRunner] Current state: job state = ''
+[2021-05-24 01:05:30Z INFO StepsRunner] Processing step: DisplayName='Use Node.js 14.x'
+[2021-05-24 01:05:30Z INFO StepsRunner] Initialize Env context for step
+[2021-05-24 01:05:30Z INFO StepsRunner] Evaluating: success()
+[2021-05-24 01:05:30Z INFO StepsRunner] Result: true
+[2021-05-24 01:05:30Z INFO StepsRunner] Starting the step.
+[2021-05-24 01:05:30Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:05:30Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:05:30Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:05:30Z INFO StepsRunner] Which: 'chcp'
+[2021-05-24 01:05:30Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper] Starting process:
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper] Process started with process id 17180, waiting for process exit.
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper] Finished process 17180 with exit code 0, and elapsed time 00:00:00.0684179.
+[2021-05-24 01:05:30Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2021-05-24 01:05:30Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:05:30Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:05:30Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:05:30Z INFO HostContext] Well known directory 'Actions': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions'
+[2021-05-24 01:05:30Z INFO ActionManager] Load action that reference repository from 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions\actions\setup-node\v2'
+[2021-05-24 01:05:30Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:05:30Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:05:30Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:05:30Z INFO HostContext] Well known directory 'Actions': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions'
+[2021-05-24 01:05:30Z INFO ActionManifestManager] Ignore action property author.
+[2021-05-24 01:05:30Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Setup Node.js environment",
+  "description": "Setup a Node.js environment by adding problem matchers and optionally downloading and adding it to the PATH",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 5,
+          "col": 3,
+          "lit": "always-auth"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 7,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 8,
+          "col": 3,
+          "lit": "node-version"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 3,
+          "lit": "architecture"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 12,
+          "col": 3,
+          "lit": "check-latest"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 14,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 15,
+          "col": 3,
+          "lit": "registry-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 17,
+          "col": 3,
+          "lit": "scope"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 19,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 3,
+          "line": 21,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 25,
+          "col": 3,
+          "lit": "version"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": false,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": null,
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": {
+    "version": "The version property will not be supported after October 1, 2019. Use node-version instead"
+  }
+}
+[2021-05-24 01:05:30Z INFO ActionManager] Action pre node.js file: N/A.
+[2021-05-24 01:05:30Z INFO ActionManager] Action node.js file: dist/index.js.
+[2021-05-24 01:05:30Z INFO ActionManager] Action post node.js file: N/A.
+[2021-05-24 01:05:30Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:05:30Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:05:30Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:05:30Z INFO HostContext] Well known directory 'Temp': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp'
+[2021-05-24 01:05:30Z INFO ActionRunner] Write event payload to C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp\_github_workflow\event.json
+[2021-05-24 01:05:30Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:05:30Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:05:30Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:05:30Z INFO HostContext] Well known directory 'Temp': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp'
+[2021-05-24 01:05:30Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2021-05-24 01:05:30Z INFO ActionManifestManager] Input 'always-auth': default value evaluate result: {
+  "type": 0,
+  "file": 3,
+  "line": 7,
+  "col": 14,
+  "lit": "false"
+}
+[2021-05-24 01:05:30Z INFO ActionManifestManager] Input 'architecture': default value evaluate result: ""
+[2021-05-24 01:05:30Z INFO ActionManifestManager] Input 'check-latest': default value evaluate result: {
+  "type": 0,
+  "file": 3,
+  "line": 14,
+  "col": 14,
+  "lit": "false"
+}
+[2021-05-24 01:05:30Z INFO ActionManifestManager] Input 'registry-url': default value evaluate result: ""
+[2021-05-24 01:05:30Z INFO ActionManifestManager] Input 'scope': default value evaluate result: ""
+[2021-05-24 01:05:30Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 3,
+  "line": 21,
+  "col": 14,
+  "lit": "***"
+}
+[2021-05-24 01:05:30Z INFO ActionManifestManager] Input 'version': default value evaluate result: ""
+[2021-05-24 01:05:30Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2021-05-24 01:05:30Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2021-05-24 01:05:30Z INFO ActionCommandManager] Register action command extension for command set-env
+[2021-05-24 01:05:30Z INFO ActionCommandManager] Register action command extension for command set-output
+[2021-05-24 01:05:30Z INFO ActionCommandManager] Register action command extension for command save-state
+[2021-05-24 01:05:30Z INFO ActionCommandManager] Register action command extension for command add-path
+[2021-05-24 01:05:30Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2021-05-24 01:05:30Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2021-05-24 01:05:30Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2021-05-24 01:05:30Z INFO ActionCommandManager] Register action command extension for command warning
+[2021-05-24 01:05:30Z INFO ActionCommandManager] Register action command extension for command error
+[2021-05-24 01:05:30Z INFO ActionCommandManager] Register action command extension for command debug
+[2021-05-24 01:05:30Z INFO ActionCommandManager] Register action command extension for command group
+[2021-05-24 01:05:30Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2021-05-24 01:05:30Z INFO ActionCommandManager] Register action command extension for command echo
+[2021-05-24 01:05:30Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:05:30Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:05:30Z INFO HostContext] Well known directory 'Externals': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\externals'
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper] Starting process:
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\externals\node12\bin\node.exe'
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions\actions\setup-node\v2\dist/index.js"'
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\git-action\git-action'
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2021-05-24 01:05:30Z INFO ProcessInvokerWrapper] Process started with process id 5892, waiting for process exit.
+[2021-05-24 01:05:31Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ad33848-49ea-50c8-ba3c-6d56baf65020', success rate: 1/1.
+[2021-05-24 01:05:32Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6e18ae3a-0002-5382-d895-85ba37ca0ed3', success rate: 1/1.
+[2021-05-24 01:05:32Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2021-05-24 01:05:36Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6e18ae3a-0002-5382-d895-85ba37ca0ed3', success rate: 1/1.
+[2021-05-24 01:05:36Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:05:36Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:05:36Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:05:38Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6e18ae3a-0002-5382-d895-85ba37ca0ed3', success rate: 1/1.
+[2021-05-24 01:05:44Z INFO JobServerQueue] Stop aggressive process web console line queue.
+[2021-05-24 01:05:46Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:05:46Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:05:46Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:05:56Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:05:56Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:05:56Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:06:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:06:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:06:06Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:06:09Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6e18ae3a-0002-5382-d895-85ba37ca0ed3', success rate: 1/1.
+[2021-05-24 01:06:16Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:06:16Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:06:16Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:06:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:06:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:06:27Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:06:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:06:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:06:37Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:06:45Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6e18ae3a-0002-5382-d895-85ba37ca0ed3', success rate: 1/1.
+[2021-05-24 01:06:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:06:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:06:47Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:06:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:06:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:06:57Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:07:07Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:07:07Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:07:07Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:07:17Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:07:17Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:07:17Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:07:19Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-05-24 01:07:19Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-05-24 01:07:19Z INFO ProcessInvokerWrapper] Finished process 5892 with exit code 0, and elapsed time 00:01:49.0035460.
+[2021-05-24 01:07:19Z INFO StepsRunner] Step result: 
+[2021-05-24 01:07:19Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2021-05-24 01:07:19Z INFO StepsRunner] Current state: job state = ''
+[2021-05-24 01:07:19Z INFO StepsRunner] Processing step: DisplayName='Run npm i'
+[2021-05-24 01:07:19Z INFO StepsRunner] Initialize Env context for step
+[2021-05-24 01:07:19Z INFO StepsRunner] Evaluating: success()
+[2021-05-24 01:07:19Z INFO StepsRunner] Result: true
+[2021-05-24 01:07:19Z INFO StepsRunner] Starting the step.
+[2021-05-24 01:07:19Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:07:19Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:07:19Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:07:19Z INFO StepsRunner] Which: 'chcp'
+[2021-05-24 01:07:19Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2021-05-24 01:07:19Z INFO ProcessInvokerWrapper] Starting process:
+[2021-05-24 01:07:19Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2021-05-24 01:07:19Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2021-05-24 01:07:19Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:07:19Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-05-24 01:07:19Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2021-05-24 01:07:19Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2021-05-24 01:07:19Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-05-24 01:07:19Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2021-05-24 01:07:19Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-05-24 01:07:19Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2021-05-24 01:07:19Z INFO ProcessInvokerWrapper] Process started with process id 2976, waiting for process exit.
+[2021-05-24 01:07:19Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-05-24 01:07:19Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-05-24 01:07:19Z INFO ProcessInvokerWrapper] Finished process 2976 with exit code 0, and elapsed time 00:00:00.2264628.
+[2021-05-24 01:07:19Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2021-05-24 01:07:19Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:07:19Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:07:19Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:07:19Z INFO HostContext] Well known directory 'Temp': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp'
+[2021-05-24 01:07:19Z INFO ActionRunner] Write event payload to C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp\_github_workflow\event.json
+[2021-05-24 01:07:19Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:07:19Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:07:19Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:07:19Z INFO HostContext] Well known directory 'Temp': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp'
+[2021-05-24 01:07:19Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2021-05-24 01:07:19Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2021-05-24 01:07:19Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2021-05-24 01:07:19Z INFO ActionCommandManager] Register action command extension for command set-env
+[2021-05-24 01:07:19Z INFO ActionCommandManager] Register action command extension for command set-output
+[2021-05-24 01:07:19Z INFO ActionCommandManager] Register action command extension for command save-state
+[2021-05-24 01:07:19Z INFO ActionCommandManager] Register action command extension for command add-path
+[2021-05-24 01:07:19Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2021-05-24 01:07:19Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2021-05-24 01:07:19Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2021-05-24 01:07:19Z INFO ActionCommandManager] Register action command extension for command warning
+[2021-05-24 01:07:19Z INFO ActionCommandManager] Register action command extension for command error
+[2021-05-24 01:07:19Z INFO ActionCommandManager] Register action command extension for command debug
+[2021-05-24 01:07:19Z INFO ActionCommandManager] Register action command extension for command group
+[2021-05-24 01:07:19Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2021-05-24 01:07:19Z INFO ActionCommandManager] Register action command extension for command echo
+[2021-05-24 01:07:19Z INFO ScriptHandler] Which: 'pwsh'
+[2021-05-24 01:07:19Z INFO ScriptHandler] Not found.
+[2021-05-24 01:07:19Z INFO ScriptHandler] Defaulting to powershell
+[2021-05-24 01:07:19Z INFO ScriptHandler] Which: 'powershell'
+[2021-05-24 01:07:19Z INFO ScriptHandler] Location: 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2021-05-24 01:07:19Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:07:19Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:07:19Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:07:19Z INFO HostContext] Well known directory 'Temp': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp'
+[2021-05-24 01:07:19Z INFO ScriptHandler] Which: 'pwsh'
+[2021-05-24 01:07:20Z INFO ScriptHandler] Not found.
+[2021-05-24 01:07:20Z INFO ScriptHandler] Defaulting to powershell
+[2021-05-24 01:07:20Z INFO ScriptHandler] Which: 'powershell'
+[2021-05-24 01:07:20Z INFO ScriptHandler] Location: 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2021-05-24 01:07:20Z INFO ProcessInvokerWrapper] Starting process:
+[2021-05-24 01:07:20Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2021-05-24 01:07:20Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp\8f8b8622-db1c-47d2-a452-12acbd23eac0.ps1'"'
+[2021-05-24 01:07:20Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\git-action\git-action'
+[2021-05-24 01:07:20Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-05-24 01:07:20Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2021-05-24 01:07:20Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2021-05-24 01:07:20Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-05-24 01:07:20Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2021-05-24 01:07:20Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-05-24 01:07:20Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2021-05-24 01:07:20Z INFO ProcessInvokerWrapper] Process started with process id 15732, waiting for process exit.
+[2021-05-24 01:07:21Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6e18ae3a-0002-5382-d895-85ba37ca0ed3', success rate: 1/1.
+[2021-05-24 01:07:21Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2021-05-24 01:07:22Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6df6c8b2-37e7-567b-dfd0-96a16ebefadf', success rate: 1/1.
+[2021-05-24 01:07:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:07:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:07:27Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:07:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:07:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:07:37Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:07:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:07:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:07:47Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:07:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:07:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:07:57Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:08:07Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:08:07Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:08:07Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:08:17Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:08:17Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:08:17Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:08:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:08:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:08:27Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:08:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:08:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:08:37Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:08:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:08:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:08:47Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:08:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:08:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:08:57Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:09:07Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:09:07Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:09:07Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:09:17Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:09:17Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:09:17Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:09:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:09:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:09:27Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:09:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:09:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:09:37Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:09:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:09:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:09:47Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:09:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:09:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:09:57Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:10:07Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:10:07Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:10:07Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:10:18Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:10:18Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:10:18Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:10:28Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:10:28Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:10:28Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:10:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:10:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:10:38Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:10:48Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:10:48Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:10:48Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:10:58Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:10:58Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:10:58Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:11:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:11:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:11:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:11:18Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:11:18Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:11:18Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:11:28Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:11:28Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:11:28Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:11:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:11:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:11:38Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:11:48Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:11:48Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:11:48Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:11:58Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:11:58Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:11:58Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:12:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:12:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:12:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:12:18Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:12:18Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:12:18Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:12:28Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:12:28Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:12:28Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:12:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:12:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:12:38Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:12:48Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:12:48Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:12:48Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:12:58Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:12:58Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:12:58Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:13:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:13:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:13:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:13:18Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:13:18Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:13:18Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:13:28Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:13:28Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:13:28Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:13:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:13:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:13:38Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:13:48Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:13:48Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:13:48Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:13:56Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6df6c8b2-37e7-567b-dfd0-96a16ebefadf', success rate: 1/1.
+[2021-05-24 01:13:57Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6df6c8b2-37e7-567b-dfd0-96a16ebefadf', success rate: 1/1.
+[2021-05-24 01:13:58Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:13:58Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:13:58Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:13:58Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-05-24 01:13:58Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-05-24 01:13:58Z INFO ProcessInvokerWrapper] Finished process 15732 with exit code 0, and elapsed time 00:06:38.9571565.
+[2021-05-24 01:13:58Z INFO StepsRunner] Step result: 
+[2021-05-24 01:13:58Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2021-05-24 01:13:58Z INFO StepsRunner] Current state: job state = ''
+[2021-05-24 01:13:58Z INFO StepsRunner] Processing step: DisplayName='Run npm run build --if-present'
+[2021-05-24 01:13:58Z INFO StepsRunner] Initialize Env context for step
+[2021-05-24 01:13:58Z INFO StepsRunner] Evaluating: success()
+[2021-05-24 01:13:58Z INFO StepsRunner] Result: true
+[2021-05-24 01:13:58Z INFO StepsRunner] Starting the step.
+[2021-05-24 01:13:58Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:13:58Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:13:58Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:13:58Z INFO StepsRunner] Which: 'chcp'
+[2021-05-24 01:13:59Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper] Starting process:
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper] Process started with process id 2088, waiting for process exit.
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper] Finished process 2088 with exit code 0, and elapsed time 00:00:00.1724681.
+[2021-05-24 01:13:59Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2021-05-24 01:13:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:13:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:13:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:13:59Z INFO HostContext] Well known directory 'Temp': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp'
+[2021-05-24 01:13:59Z INFO ActionRunner] Write event payload to C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp\_github_workflow\event.json
+[2021-05-24 01:13:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:13:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:13:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:13:59Z INFO HostContext] Well known directory 'Temp': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp'
+[2021-05-24 01:13:59Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2021-05-24 01:13:59Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2021-05-24 01:13:59Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2021-05-24 01:13:59Z INFO ActionCommandManager] Register action command extension for command set-env
+[2021-05-24 01:13:59Z INFO ActionCommandManager] Register action command extension for command set-output
+[2021-05-24 01:13:59Z INFO ActionCommandManager] Register action command extension for command save-state
+[2021-05-24 01:13:59Z INFO ActionCommandManager] Register action command extension for command add-path
+[2021-05-24 01:13:59Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2021-05-24 01:13:59Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2021-05-24 01:13:59Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2021-05-24 01:13:59Z INFO ActionCommandManager] Register action command extension for command warning
+[2021-05-24 01:13:59Z INFO ActionCommandManager] Register action command extension for command error
+[2021-05-24 01:13:59Z INFO ActionCommandManager] Register action command extension for command debug
+[2021-05-24 01:13:59Z INFO ActionCommandManager] Register action command extension for command group
+[2021-05-24 01:13:59Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2021-05-24 01:13:59Z INFO ActionCommandManager] Register action command extension for command echo
+[2021-05-24 01:13:59Z INFO ScriptHandler] Which: 'pwsh'
+[2021-05-24 01:13:59Z INFO ScriptHandler] Not found.
+[2021-05-24 01:13:59Z INFO ScriptHandler] Defaulting to powershell
+[2021-05-24 01:13:59Z INFO ScriptHandler] Which: 'powershell'
+[2021-05-24 01:13:59Z INFO ScriptHandler] Location: 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2021-05-24 01:13:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:13:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:13:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:13:59Z INFO HostContext] Well known directory 'Temp': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp'
+[2021-05-24 01:13:59Z INFO ScriptHandler] Which: 'pwsh'
+[2021-05-24 01:13:59Z INFO ScriptHandler] Not found.
+[2021-05-24 01:13:59Z INFO ScriptHandler] Defaulting to powershell
+[2021-05-24 01:13:59Z INFO ScriptHandler] Which: 'powershell'
+[2021-05-24 01:13:59Z INFO ScriptHandler] Location: 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper] Starting process:
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp\9ea0d9ec-e582-4342-bac1-90bf834b03f8.ps1'"'
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\git-action\git-action'
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2021-05-24 01:13:59Z INFO ProcessInvokerWrapper] Process started with process id 13792, waiting for process exit.
+[2021-05-24 01:14:00Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2021-05-24 01:14:01Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2091dd97-b57a-59d7-148a-fbbcbde32eec', success rate: 1/1.
+[2021-05-24 01:14:06Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2091dd97-b57a-59d7-148a-fbbcbde32eec', success rate: 1/1.
+[2021-05-24 01:14:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:14:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:14:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:14:18Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:14:18Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:14:18Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:14:28Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:14:28Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:14:28Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:14:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:14:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:14:38Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:14:48Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:14:48Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:14:48Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:14:58Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:14:58Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:14:58Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:15:07Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2091dd97-b57a-59d7-148a-fbbcbde32eec', success rate: 1/1.
+[2021-05-24 01:15:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:15:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:15:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:15:18Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:15:18Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:15:18Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:15:28Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:15:28Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:15:28Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:15:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:15:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:15:38Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:15:48Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:15:48Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:15:48Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:15:58Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:15:58Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:15:58Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:16:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:16:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:16:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:16:18Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:16:18Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:16:18Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:16:28Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:16:28Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:16:28Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper] Finished process 13792 with exit code 0, and elapsed time 00:02:36.1417485.
+[2021-05-24 01:16:35Z INFO StepsRunner] Step result: 
+[2021-05-24 01:16:35Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2021-05-24 01:16:35Z INFO StepsRunner] Current state: job state = ''
+[2021-05-24 01:16:35Z INFO StepsRunner] Processing step: DisplayName='Run npm test'
+[2021-05-24 01:16:35Z INFO StepsRunner] Initialize Env context for step
+[2021-05-24 01:16:35Z INFO StepsRunner] Evaluating: success()
+[2021-05-24 01:16:35Z INFO StepsRunner] Result: true
+[2021-05-24 01:16:35Z INFO StepsRunner] Starting the step.
+[2021-05-24 01:16:35Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:16:35Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:16:35Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:16:35Z INFO StepsRunner] Which: 'chcp'
+[2021-05-24 01:16:35Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper] Starting process:
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper] Process started with process id 16488, waiting for process exit.
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper] Finished process 16488 with exit code 0, and elapsed time 00:00:00.0806221.
+[2021-05-24 01:16:35Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2021-05-24 01:16:35Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:16:35Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:16:35Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:16:35Z INFO HostContext] Well known directory 'Temp': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp'
+[2021-05-24 01:16:35Z INFO ActionRunner] Write event payload to C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp\_github_workflow\event.json
+[2021-05-24 01:16:35Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:16:35Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:16:35Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:16:35Z INFO HostContext] Well known directory 'Temp': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp'
+[2021-05-24 01:16:35Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2021-05-24 01:16:35Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2021-05-24 01:16:35Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2021-05-24 01:16:35Z INFO ActionCommandManager] Register action command extension for command set-env
+[2021-05-24 01:16:35Z INFO ActionCommandManager] Register action command extension for command set-output
+[2021-05-24 01:16:35Z INFO ActionCommandManager] Register action command extension for command save-state
+[2021-05-24 01:16:35Z INFO ActionCommandManager] Register action command extension for command add-path
+[2021-05-24 01:16:35Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2021-05-24 01:16:35Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2021-05-24 01:16:35Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2021-05-24 01:16:35Z INFO ActionCommandManager] Register action command extension for command warning
+[2021-05-24 01:16:35Z INFO ActionCommandManager] Register action command extension for command error
+[2021-05-24 01:16:35Z INFO ActionCommandManager] Register action command extension for command debug
+[2021-05-24 01:16:35Z INFO ActionCommandManager] Register action command extension for command group
+[2021-05-24 01:16:35Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2021-05-24 01:16:35Z INFO ActionCommandManager] Register action command extension for command echo
+[2021-05-24 01:16:35Z INFO ScriptHandler] Which: 'pwsh'
+[2021-05-24 01:16:35Z INFO ScriptHandler] Not found.
+[2021-05-24 01:16:35Z INFO ScriptHandler] Defaulting to powershell
+[2021-05-24 01:16:35Z INFO ScriptHandler] Which: 'powershell'
+[2021-05-24 01:16:35Z INFO ScriptHandler] Location: 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2021-05-24 01:16:35Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:16:35Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:16:35Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:16:35Z INFO HostContext] Well known directory 'Temp': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp'
+[2021-05-24 01:16:35Z INFO ScriptHandler] Which: 'pwsh'
+[2021-05-24 01:16:35Z INFO ScriptHandler] Not found.
+[2021-05-24 01:16:35Z INFO ScriptHandler] Defaulting to powershell
+[2021-05-24 01:16:35Z INFO ScriptHandler] Which: 'powershell'
+[2021-05-24 01:16:35Z INFO ScriptHandler] Location: 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper] Starting process:
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp\817acbaf-ac53-437a-a3e1-c2856981ad2e.ps1'"'
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\git-action\git-action'
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2021-05-24 01:16:35Z INFO ProcessInvokerWrapper] Process started with process id 1296, waiting for process exit.
+[2021-05-24 01:16:37Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2091dd97-b57a-59d7-148a-fbbcbde32eec', success rate: 1/1.
+[2021-05-24 01:16:38Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd80f8feb-80b4-51bd-c876-203cada35044', success rate: 1/1.
+[2021-05-24 01:16:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:16:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:16:38Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:16:39Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2021-05-24 01:16:39Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd80f8feb-80b4-51bd-c876-203cada35044', success rate: 1/1.
+[2021-05-24 01:16:48Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:16:48Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:16:48Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:16:58Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:16:58Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:16:58Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:17:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:17:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:17:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:17:18Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:17:18Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:17:18Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper] Finished process 1296 with exit code 0, and elapsed time 00:00:49.0763129.
+[2021-05-24 01:17:24Z INFO StepsRunner] Step result: 
+[2021-05-24 01:17:24Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2021-05-24 01:17:24Z INFO StepsRunner] Current state: job state = ''
+[2021-05-24 01:17:24Z INFO StepsRunner] Processing step: DisplayName='Post Run actions/checkout@v2'
+[2021-05-24 01:17:24Z INFO StepsRunner] Initialize Env context for step
+[2021-05-24 01:17:24Z INFO StepsRunner] Evaluating: always()
+[2021-05-24 01:17:24Z INFO StepsRunner] Result: true
+[2021-05-24 01:17:24Z INFO StepsRunner] Starting the step.
+[2021-05-24 01:17:24Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:17:24Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:17:24Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:17:24Z INFO StepsRunner] Which: 'chcp'
+[2021-05-24 01:17:24Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper] Starting process:
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper] Process started with process id 15148, waiting for process exit.
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper] Finished process 15148 with exit code 0, and elapsed time 00:00:00.0611228.
+[2021-05-24 01:17:24Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2021-05-24 01:17:24Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:17:24Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:17:24Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:17:24Z INFO HostContext] Well known directory 'Actions': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions'
+[2021-05-24 01:17:24Z INFO ActionManager] Load action that reference repository from 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions\actions\checkout\v2'
+[2021-05-24 01:17:24Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:17:24Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:17:24Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:17:24Z INFO HostContext] Well known directory 'Actions': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions'
+[2021-05-24 01:17:24Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2021-05-24 01:17:24Z INFO ActionManager] Action pre node.js file: N/A.
+[2021-05-24 01:17:24Z INFO ActionManager] Action node.js file: dist/index.js.
+[2021-05-24 01:17:24Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2021-05-24 01:17:24Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:17:24Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:17:24Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:17:24Z INFO HostContext] Well known directory 'Temp': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp'
+[2021-05-24 01:17:24Z INFO ActionRunner] Write event payload to C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp\_github_workflow\event.json
+[2021-05-24 01:17:24Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:17:24Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:17:24Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:17:24Z INFO HostContext] Well known directory 'Temp': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp'
+[2021-05-24 01:17:24Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2021-05-24 01:17:24Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "ITIfeanyi/git-action"
+}
+[2021-05-24 01:17:24Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2021-05-24 01:17:24Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2021-05-24 01:17:24Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2021-05-24 01:17:24Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2021-05-24 01:17:24Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2021-05-24 01:17:24Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2021-05-24 01:17:24Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2021-05-24 01:17:24Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2021-05-24 01:17:24Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 58,
+  "col": 14,
+  "lit": "1"
+}
+[2021-05-24 01:17:24Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 61,
+  "col": 14,
+  "lit": "false"
+}
+[2021-05-24 01:17:24Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2021-05-24 01:17:24Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2021-05-24 01:17:24Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2021-05-24 01:17:24Z INFO ActionCommandManager] Register action command extension for command set-env
+[2021-05-24 01:17:24Z INFO ActionCommandManager] Register action command extension for command set-output
+[2021-05-24 01:17:24Z INFO ActionCommandManager] Register action command extension for command save-state
+[2021-05-24 01:17:24Z INFO ActionCommandManager] Register action command extension for command add-path
+[2021-05-24 01:17:24Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2021-05-24 01:17:24Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2021-05-24 01:17:24Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2021-05-24 01:17:24Z INFO ActionCommandManager] Register action command extension for command warning
+[2021-05-24 01:17:24Z INFO ActionCommandManager] Register action command extension for command error
+[2021-05-24 01:17:24Z INFO ActionCommandManager] Register action command extension for command debug
+[2021-05-24 01:17:24Z INFO ActionCommandManager] Register action command extension for command group
+[2021-05-24 01:17:24Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2021-05-24 01:17:24Z INFO ActionCommandManager] Register action command extension for command echo
+[2021-05-24 01:17:24Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:17:24Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:17:24Z INFO HostContext] Well known directory 'Externals': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\externals'
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper] Starting process:
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\externals\node12\bin\node.exe'
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_actions\actions\checkout\v2\dist/index.js"'
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\git-action\git-action'
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-05-24 01:17:24Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2021-05-24 01:17:25Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd80f8feb-80b4-51bd-c876-203cada35044', success rate: 1/1.
+[2021-05-24 01:17:26Z INFO JobServerQueue] Try to append 1 batches web console lines for record '10922fbd-9bef-49c5-87eb-be0c502e7265', success rate: 1/1.
+[2021-05-24 01:17:26Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2021-05-24 01:17:28Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:17:28Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:17:28Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:17:29Z INFO ProcessInvokerWrapper] Process started with process id 14320, waiting for process exit.
+[2021-05-24 01:17:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:17:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:17:39Z INFO HostContext] Well known directory 'Work': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work'
+[2021-05-24 01:17:40Z INFO AddMaskCommandExtension] Add new secret mask with length of 32
+[2021-05-24 01:17:40Z INFO JobServerQueue] Try to append 1 batches web console lines for record '10922fbd-9bef-49c5-87eb-be0c502e7265', success rate: 1/1.
+[2021-05-24 01:17:41Z INFO JobServerQueue] Try to append 1 batches web console lines for record '10922fbd-9bef-49c5-87eb-be0c502e7265', success rate: 1/1.
+[2021-05-24 01:17:45Z INFO JobServerQueue] Try to append 1 batches web console lines for record '10922fbd-9bef-49c5-87eb-be0c502e7265', success rate: 1/1.
+[2021-05-24 01:17:46Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-05-24 01:17:46Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-05-24 01:17:46Z INFO ProcessInvokerWrapper] Finished process 14320 with exit code 0, and elapsed time 00:00:21.4941695.
+[2021-05-24 01:17:46Z INFO StepsRunner] Step result: 
+[2021-05-24 01:17:46Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2021-05-24 01:17:46Z INFO StepsRunner] Current state: job state = ''
+[2021-05-24 01:17:46Z INFO JobRunner] Finalize job.
+[2021-05-24 01:17:46Z INFO HostContext] Well known directory 'Bin': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\bin'
+[2021-05-24 01:17:46Z INFO HostContext] Well known directory 'Root': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner'
+[2021-05-24 01:17:46Z INFO HostContext] Well known directory 'Diag': 'C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_diag'
+[2021-05-24 01:17:46Z INFO JobExtension] Initialize Env context
+[2021-05-24 01:17:46Z INFO JobExtension] Initialize steps context
+[2021-05-24 01:17:46Z INFO JobExtension] Total accessible running process: 209.
+[2021-05-24 01:17:46Z INFO JobExtension] Inspecting process environment variables. PID: 1588 (svchost)
+[2021-05-24 01:17:46Z WARN JobExtension] Ignore exception during read process environment variables: Access is denied.
+[2021-05-24 01:17:47Z INFO JobExtension] Inspecting process environment variables. PID: 16364 (svchost)
+[2021-05-24 01:17:47Z WARN JobExtension] Ignore exception during read process environment variables: Access is denied.
+[2021-05-24 01:17:47Z INFO JobExtension] Inspecting process environment variables. PID: 3196 (chrome)
+[2021-05-24 01:17:47Z INFO JobExtension] Inspecting process environment variables. PID: 1904 (WmiPrvSE)
+[2021-05-24 01:17:47Z WARN JobExtension] Ignore exception during read process environment variables: Access is denied.
+[2021-05-24 01:17:47Z INFO JobExtension] Inspecting process environment variables. PID: 3700 (chrome)
+[2021-05-24 01:17:47Z INFO JobServerQueue] Try to append 1 batches web console lines for record '1a11cd81-c56e-46a7-b15b-99d602307b31', success rate: 1/1.
+[2021-05-24 01:17:47Z INFO JobRunner] Job result after all job steps finish: Succeeded
+[2021-05-24 01:17:47Z INFO JobRunner] Completing the job execution context.
+[2021-05-24 01:17:47Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2021-05-24 01:17:47Z INFO JobRunner] Shutting down the job server queue.
+[2021-05-24 01:17:47Z INFO JobServerQueue] Fire signal to shutdown all queues.
+[2021-05-24 01:17:48Z INFO JobServerQueue] All queue process task stopped.
+[2021-05-24 01:17:48Z INFO JobServerQueue] Web console line queue drained.
+[2021-05-24 01:17:48Z INFO JobServerQueue] Uploading 2 files in one shot.
+[2021-05-24 01:17:51Z INFO JobServerQueue] Try to upload 2 log files or attachments, success rate: 2/2.
+[2021-05-24 01:17:51Z INFO JobServerQueue] File upload queue drained.
+[2021-05-24 01:17:52Z INFO JobServerQueue] Timeline update queue drained.
+[2021-05-24 01:17:52Z INFO JobServerQueue] All queue process tasks have been stopped, and all queues are drained.
+[2021-05-24 01:17:52Z INFO TempDirectoryManager] Cleaning runner temp folder: C:\Users\black\Desktop\pluralSight\git-action-react\actions-runner\_work\_temp
+[2021-05-24 01:18:16Z INFO JobRunner] Raising job completed event.
+[2021-05-24 01:18:16Z INFO Worker] Job completed.
